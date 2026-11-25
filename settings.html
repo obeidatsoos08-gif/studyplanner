@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات | منظّم دراستي</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>📚 منظّم دراستي</h2>
+    <a href="dashboard.html">🏠 لوحة التحكم</a>
+    <a href="schedule.html">📅 الجدول الدراسي</a>
+    <a href="tasks.html">📝 المهام</a>
+    <a href="exams.html">📚 الامتحانات</a>
+    <a href="timer.html">⏱️ مؤقت الدراسة</a>
+    <a href="achievements.html">🏆 إنجازاتي</a>
+    <a href="profile.html">👤 الملف الشخصي</a>
+    <a href="settings.html" class="active">⚙️ الإعدادات</a>
+    <a href="index.html">🚪 تسجيل الخروج</a>
+</div>
+
+<main class="main-content">
+    <header>
+        <h1>الإعدادات ⚙️</h1>
+        <p>خصص الموقع بالطريقة اللي بتناسبك</p>
+    </header>
+
+    <section class="settings-card">
+        <h2>🎨 المظهر</h2>
+        <p>اختاري المظهر المناسب لاستخدام الموقع</p>
+
+        <div class="setting-row">
+            <div>
+                <h3>الوضع الداكن</h3>
+                <span>تغيير ألوان الموقع إلى الوضع الداكن</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="darkMode">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </section>
+
+    <section class="settings-card">
+        <h2>🌐 اللغة</h2>
+        <p>اختاري لغة عرض الموقع</p>
+
+        <select id="language">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+        </select>
+    </section>
+
+    <section class="settings-card">
+        <h2>💾 حفظ الإعدادات</h2>
+        <p>احفظي التغييرات التي قمتِ بها</p>
+        <button class="save-btn" id="saveSettings">حفظ الإعدادات</button>
+        <p id="message"></p>
+    </section>
+
+    <section class="settings-card danger-card">
+        <h2>⚠️ إدارة البيانات</h2>
+        <p>يمكنك حذف البيانات المحفوظة في هذا الموقع من جهازك.</p>
+        <button class="delete-btn" id="clearData">مسح جميع البيانات</button>
+    </section>
+
+</main>
+<div class="modal-overlay" id="confirmModal">
+    <div class="confirm-modal">
+        <div class="modal-icon">⚠️</div>
+
+        <h2>تأكيد مسح البيانات</h2>
+
+        <p>
+            هل أنتِ متأكدة من مسح جميع بيانات الموقع؟
+            لا يمكن التراجع عن هذه الخطوة.
+        </p>
+
+        <div class="modal-buttons">
+            <button id="cancelDelete">إلغاء</button>
+            <button id="confirmDelete">نعم، امسح</button>
+        </div>
+    </div>
+</div>
+<script src="settings.js"></script>
+</body>
+</html>

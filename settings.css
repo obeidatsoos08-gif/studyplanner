@@ -1,0 +1,321 @@
+
+:root {
+    --blue: #AAC9CE;
+    --gray: #B6B4C2;
+    --mauve: #C9BBC8;
+    --pink: #E5C1CD;
+    --peach: #F3DBCF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f8f5f7;
+    color: #333;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: white;
+    padding: 25px 15px;
+    min-height: 100vh;
+    box-shadow: 2px 0 10px #ddd;
+}
+
+.sidebar h2 {
+    color: #8b7186;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    padding: 14px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: var(--pink);
+    color: #604c5b;
+}
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #8b7186;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+}
+
+.settings-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px #e8e0e5;
+}
+
+.settings-card h2 {
+    color: #8b7186;
+    margin-bottom: 12px;
+}
+
+.settings-card p {
+    color: #777;
+    margin-bottom: 18px;
+}
+
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.setting-row h3 {
+    margin-bottom: 7px;
+}
+
+.setting-row span {
+    color: #888;
+}
+
+.switch {
+    position: relative;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: var(--gray);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 4px;
+    top: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #8b7186;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(-27px);
+}
+
+select {
+    width: 220px;
+    padding: 12px;
+    border: 1px solid var(--gray);
+    border-radius: 9px;
+    background: white;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.save-btn {
+    background: var(--blue);
+    color: #34484b;
+}
+
+.save-btn:hover {
+    background: #91b8be;
+}
+
+.delete-btn {
+    background: #e8a6b2;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #d88999;
+}
+
+.danger-card {
+    border-right: 5px solid #e8a6b2;
+}
+
+#message {
+    margin-top: 15px;
+    color: #648c70;
+}
+
+body.dark {
+    background: #25232b;
+    color: #f4edf3;
+}
+
+body.dark .sidebar,
+body.dark .settings-card {
+    background: #35313b;
+    color: #f4edf3;
+}
+
+body.dark .sidebar a {
+    color: #eee;
+}
+
+body.dark .sidebar a:hover,
+body.dark .sidebar a.active {
+    background: #665568;
+}
+
+body.dark header h1,
+body.dark .settings-card h2 {
+    color: #e5c1cd;
+}
+
+body.dark p,
+body.dark .setting-row span {
+    color: #ccc;
+}
+
+body.dark select {
+    background: #45404b;
+    color: white;
+    border-color: #777;
+}
+
+@media (max-width: 750px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(40, 35, 45, 0.45);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.confirm-modal {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    animation: appear 0.25s ease;
+}
+
+.modal-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.confirm-modal h2 {
+    color: #8b7186;
+    margin-bottom: 15px;
+}
+
+.confirm-modal p {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 13px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+#cancelDelete {
+    background: #AAC9CE;
+    color: #34484b;
+}
+
+#confirmDelete {
+    background: #d98e9f;
+    color: white;
+}
+
+#cancelDelete:hover {
+    background: #91b8be;
+}
+
+#confirmDelete:hover {
+    background: #c77b8e;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

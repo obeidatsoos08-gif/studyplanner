@@ -1,0 +1,411 @@
+
+:root {
+    --blue: #AAC9CE;
+    --gray: #B6B4C2;
+    --mauve: #C9BBC8;
+    --pink: #E5C1CD;
+    --peach: #F3DBCF;
+    --white: #FFFFFF;
+    --text: #55515B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+body {
+    background: #F8F7F8;
+    color: var(--text);
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* القائمة الجانبية */
+
+.sidebar {
+    width: 245px;
+    background: white;
+    padding: 25px 17px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.04);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.brand span {
+    font-size: 30px;
+}
+
+.brand h2 {
+    font-size: 19px;
+    color: #777080;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #77717D;
+    padding: 14px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #E8F0F0;
+    color: #58777C;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-top: 25px;
+}
+
+/* المحتوى الرئيسي */
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.topbar h2 {
+    font-size: 25px;
+    color: #777080;
+    margin-bottom: 10px;
+}
+
+.topbar p {
+    font-size: 14px;
+    color: #99939D;
+}
+
+.language-btn {
+    border: 1px solid var(--mauve);
+    background: white;
+    color: #69616F;
+    padding: 11px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.language-btn:hover {
+    background: var(--mauve);
+}
+
+/* البطاقات */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    padding: 22px;
+    border-radius: 17px;
+    min-height: 165px;
+}
+
+.blue {
+    background: #E4EFF0;
+}
+
+.pink {
+    background: #F6E8ED;
+}
+
+.peach {
+    background: #F9EDE6;
+}
+
+.mauve {
+    background: #EEEAF0;
+}
+
+.stat-icon {
+    font-size: 27px;
+    margin-bottom: 13px;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.stat-card h2 {
+    font-size: 27px;
+    color: #625C69;
+    margin-bottom: 7px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #8B8490;
+}
+
+/* البطاقات الداخلية */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 17px;
+    box-shadow: 0 5px 20px rgba(80,70,90,0.04);
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.panel-heading h3 {
+    font-size: 18px;
+    color: #777080;
+}
+
+.panel-heading span {
+    font-size: 23px;
+}
+
+/* المهام اليومية */
+
+.task {
+    padding: 15px 0;
+    border-bottom: 1px solid #F1EDF1;
+}
+
+.task label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.task input {
+    accent-color: #8EABB0;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.task:has(input:checked) span {
+    text-decoration: line-through;
+    color: #AAA3AD;
+}
+
+/* نسبة الإنجاز */
+
+.progress-area {
+    margin-top: 25px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #F0ECF0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--blue);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+/* الجدول الدراسي */
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 17px 0;
+    border-bottom: 1px solid #F1EDF1;
+}
+
+.time {
+    background: #E8F0F0;
+    color: #58777C;
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 13px;
+    direction: ltr;
+}
+
+.schedule-item strong {
+    font-size: 14px;
+    color: #625C69;
+}
+
+.schedule-item p {
+    font-size: 12px;
+    color: #AAA3AD;
+    margin-top: 7px;
+}
+
+/* العبارة التحفيزية */
+
+.motivation {
+    background: linear-gradient(
+        100deg,
+        var(--blue),
+        var(--pink),
+        var(--peach)
+    );
+    padding: 25px;
+    border-radius: 17px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.motivation-icon {
+    font-size: 38px;
+}
+
+.motivation h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #514D59;
+}
+
+.motivation p {
+    font-size: 13px;
+    color: #625C69;
+    line-height: 1.8;
+}
+
+/* أسفل الصفحة */
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #AAA3AD;
+    font-size: 12px;
+}
+
+/* الشاشات الصغيرة */
+
+@media(max-width: 1000px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 750px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .brand {
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-bottom {
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .topbar h2 {
+        font-size: 19px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h3 {
+        font-size: 12px;
+    }
+
+    .topbar {
+        flex-direction: column;
+    }
+
+}

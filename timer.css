@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f8f5f7;
+    color: #45434b;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: #AAC9CE;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #45434b;
+    padding: 13px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: white;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #75677c;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #88818c;
+}
+
+.timer-section {
+    background: white;
+    max-width: 750px;
+    margin: auto;
+    padding: 35px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.timer-modes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    background: #C9BBC8;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #B6B4C2;
+}
+
+.mode.active {
+    background: #AAC9CE;
+}
+
+.timer-circle {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    position: relative;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+.background-circle {
+    stroke: #eee9ee;
+}
+
+.progress-circle {
+    stroke: #AAC9CE;
+    stroke-linecap: round;
+    stroke-dasharray: 785;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s;
+}
+
+.timer-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timer-display h2 {
+    font-size: 48px;
+    color: #75677c;
+}
+
+.timer-display p {
+    margin-top: 10px;
+    color: #88818c;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+#startBtn {
+    background: #AAC9CE;
+    min-width: 110px;
+}
+
+.sessions {
+    background: #f8f3f6;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    margin: 20px auto;
+}
+
+.sessions h3 {
+    color: #75677c;
+    margin-bottom: 10px;
+}
+
+.sessions p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.motivation {
+    color: #8c788d;
+    margin-top: 25px;
+}
+
+@media (max-width: 750px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .content {
+        padding: 18px;
+    }
+
+    .timer-section {
+        padding: 25px 10px;
+    }
+}

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنجازاتي | Study Planner</title>
+    <link rel="stylesheet" href="achievements.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>Study Planner</h2>
+
+        <a href="dashboard.html">🏠 الرئيسية</a>
+        <a href="schedule.html">📅 الجدول الدراسي</a>
+        <a href="tasks.html">📝 المهام</a>
+        <a href="exams.html">📚 الامتحانات</a>
+        <a href="timer.html">⏱️ مؤقت الدراسة</a>
+        <a href="achievements.html" class="active">🏆 إنجازاتي</a>
+        <a href="profile.html" class="nav-link" id="navProfile">👤 الملف الشخصي</a>
+        <a href="settings.html" class="nav-link" id="navSettings">⚙️ الإعدادات</a>
+        <a href="index.html">🚪 تسجيل الخروج</a>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>إنجازاتي 🏆</h1>
+            <p>كل خطوة صغيرة تقرّبك من النجاح</p>
+        </header>
+
+        <section class="welcome-card">
+            <h2>أنتِ قادرة على تحقيق أهدافك!</h2>
+            <p>استمري في تنظيم وقتك وإنجاز مهامك الدراسية.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>📝</span>
+                <h3>المهام المكتملة</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <span>⏱️</span>
+                <h3>جلسات الدراسة</h3>
+                <p id="studySessions">0</p>
+            </div>
+
+            <div class="stat-card">
+                <span>📚</span>
+                <h3>الامتحانات المسجلة</h3>
+                <p id="totalExams">0</p>
+            </div>
+
+        </section>
+
+        <section class="progress-section">
+
+            <h2>نسبة إنجاز المهام</h2>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <p id="progressText">0% من المهام مكتملة</p>
+
+        </section>
+
+        <section class="badges-section">
+
+            <h2>شارات الإنجاز</h2>
+
+            <div class="badges-container">
+
+                <div class="badge-card" id="badge1">
+                    <span>🌱</span>
+                    <h3>البداية الجميلة</h3>
+                    <p>إنجاز أول مهمة</p>
+                    <small>غير مكتسبة بعد</small>
+                </div>
+
+                <div class="badge-card" id="badge2">
+                    <span>📖</span>
+                    <h3>محبة الدراسة</h3>
+                    <p>إكمال 5 مهام</p>
+                    <small>غير مكتسبة بعد</small>
+                </div>
+
+                <div class="badge-card" id="badge3">
+                    <span>🔥</span>
+                    <h3>المثابرة</h3>
+                    <p>إكمال 10 مهام</p>
+                    <small>غير مكتسبة بعد</small>
+                </div>
+
+                <div class="badge-card" id="badge4">
+                    <span>⏰</span>
+                    <h3>التركيز</h3>
+                    <p>إكمال 5 جلسات دراسة</p>
+                    <small>غير مكتسبة بعد</small>
+                </div>
+
+                <div class="badge-card" id="badge5">
+                    <span>🏆</span>
+                    <h3>نجمة الإنجاز</h3>
+                    <p>إكمال 20 مهمة</p>
+                    <small>غير مكتسبة بعد</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="achievements.js"></script>
+
+</body>
+</html>

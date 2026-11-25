@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية | منظّم دراستي</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- القائمة الجانبية -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <span>📚</span>
+            <h2 id="brandName">منظّم دراستي</h2>
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="nav-link active" id="navHome">🏠 الرئيسية</a>
+            <a href="schedule.html" class="nav-link" id="navSchedule">📅 الجدول الدراسي</a>
+            <a href="tasks.html" class="nav-link" id="navTasks">📝 المهام</a>
+            <a href="exams.html" class="nav-link" id="navExams">📚 الامتحانات</a>
+            <a href="timer.html" class="nav-link" id="navTimer">⏱️ مؤقت الدراسة</a>
+            <a href="achievements.html" class="nav-link" id="navAchievements">🏆 إنجازاتي</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="nav-link" id="navProfile">👤 الملف الشخصي</a>
+            <a href="#" class="nav-link" id="navSettings">⚙ الإعدادات</a>
+            <a href="index.html" class="nav-link" id="navLogout">🚪 تسجيل الخروج</a>
+        </div>
+
+    </aside>
+
+
+    <!-- المحتوى الرئيسي -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h2 id="welcome">مرحباً بك في منظّم دراستي 🌸</h2>
+                <p id="welcomeText">هيا نبدأ يوماً مليئاً بالإنجاز!</p>
+            </div>
+
+            <button class="language-btn" onclick="changeLanguage()" id="languageBtn">
+                English 🌐
+            </button>
+
+        </header>
+
+
+        <!-- البطاقات -->
+
+        <section class="stats">
+
+            <div class="stat-card blue">
+                <div class="stat-icon">📚</div>
+                <h3 id="subjectsTitle">المواد الدراسية</h3>
+                <h2>5</h2>
+                <p id="subjectsText">المواد المسجلة</p>
+            </div>
+
+            <div class="stat-card pink">
+                <div class="stat-icon">📝</div>
+                <h3 id="tasksTitle">المهام المتبقية</h3>
+                <h2 id="taskCount">3</h2>
+                <p id="tasksText">مهام تحتاج إلى إنجاز</p>
+            </div>
+
+            <div class="stat-card peach">
+                <div class="stat-icon">📖</div>
+                <h3 id="examsTitle">الامتحانات القادمة</h3>
+                <h2>2</h2>
+                <p id="examsText">امتحانات قادمة</p>
+            </div>
+
+            <div class="stat-card mauve">
+                <div class="stat-icon">⏰</div>
+                <h3 id="hoursTitle">ساعات الدراسة</h3>
+                <h2>4</h2>
+                <p id="hoursText">ساعات هذا الأسبوع</p>
+            </div>
+
+        </section>
+
+
+        <!-- المهام والإنجاز -->
+
+        <section class="content-grid">
+
+            <div class="panel tasks-panel">
+
+                <div class="panel-heading">
+                    <h3 id="todayTasks">مهامي اليومية</h3>
+                    <span>📝</span>
+                </div>
+
+                <div class="task">
+                    <label>
+                        <input type="checkbox" class="task-check">
+                        <span id="task1">مراجعة اللغة العربية</span>
+                    </label>
+                </div>
+
+                <div class="task">
+                    <label>
+                        <input type="checkbox" class="task-check">
+                        <span id="task2">حل أسئلة الرياضيات</span>
+                    </label>
+                </div>
+
+                <div class="task">
+                    <label>
+                        <input type="checkbox" class="task-check">
+                        <span id="task3">دراسة الوحدة الإنجليزية</span>
+                    </label>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-info">
+                        <span id="progressTitle">نسبة الإنجاز</span>
+                        <strong id="progressPercent">0%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- الجدول الدراسي -->
+
+            <div class="panel schedule-panel">
+
+                <div class="panel-heading">
+                    <h3 id="scheduleTitle">الجدول الدراسي</h3>
+                    <span>📅</span>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">09:00</div>
+                    <div>
+                        <strong id="subject1">اللغة العربية</strong>
+                        <p id="lesson1">مراجعة الدرس الأول</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">11:00</div>
+                    <div>
+                        <strong id="subject2">اللغة الإنجليزية</strong>
+                        <p id="lesson2">دراسة الوحدة الثانية</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">01:00</div>
+                    <div>
+                        <strong id="subject3">التاريخ</strong>
+                        <p id="lesson3">مراجعة الدرس</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- عبارة تحفيزية -->
+
+        <section class="motivation">
+            <div class="motivation-icon">🌷</div>
+
+            <div>
+                <h3 id="motivationTitle">استمر، فأنت تقترب من هدفك!</h3>
+                <p id="motivationText">
+                    كل خطوة صغيرة في دراستك تقربك من النجاح.
+                </p>
+            </div>
+        </section>
+
+        <footer id="footer">
+            © 2026 منظّم دراستي - جميع الحقوق محفوظة
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

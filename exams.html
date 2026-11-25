@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الامتحانات | Study Planner</title>
+    <link rel="stylesheet" href="exams.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>Study Planner</h2>
+
+        <a href="dashboard.html">🏠 الرئيسية</a>
+        <a href="schedule.html">📅 الجدول الدراسي</a>
+        <a href="tasks.html">📝 المهام</a>
+        <a href="exams.html" class="active">📚 الامتحانات</a>
+        <a href="timer.html" class="nav-link" id="navTimer">⏱️ مؤقت الدراسة</a>
+        <a href="achievements.html" class="nav-link" id="navAchievements">🏆 إنجازاتي</a>
+        <a href="profile.html" class="nav-link" id="navProfile">👤 الملف الشخصي</a>
+        <a href="settings.html" class="nav-link" id="navSettings">⚙️ الإعدادات</a>
+        <a href="index.html">🚪 تسجيل الخروج</a>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>امتحاناتي</h1>
+            <p>تابعي مواعيد امتحاناتك واستعدي لها مبكراً</p>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>كل الامتحانات</h3>
+                <p id="totalExams">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>الامتحانات القادمة</h3>
+                <p id="upcomingExams">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>الامتحانات المنتهية</h3>
+                <p id="finishedExams">0</p>
+            </div>
+
+        </section>
+
+        <section class="add-section">
+
+            <h2>إضافة امتحان جديد +</h2>
+
+            <form id="examForm">
+
+                <input type="text" id="examName"
+                    placeholder="اسم الامتحان" required>
+
+                <select id="examSubject" required>
+                    <option value="">اختاري المادة</option>
+                    <option>اللغة العربية</option>
+                    <option>اللغة الإنجليزية</option>
+                    <option>التاريخ</option>
+                    <option>التربية الإسلامية</option>
+                    <option>مواد أخرى</option>
+                </select>
+
+                <input type="date" id="examDate" required>
+
+                <input type="time" id="examTime" required>
+
+                <select id="examType">
+                    <option value="شهري">امتحان شهري</option>
+                    <option value="فصلي">امتحان فصلي</option>
+                    <option value="نهائي">امتحان نهائي</option>
+                    <option value="قصير">امتحان قصير</option>
+                </select>
+
+                <button type="submit">إضافة الامتحان</button>
+
+            </form>
+
+        </section>
+
+        <section class="exams-section">
+
+            <h2>قائمة الامتحانات</h2>
+
+            <div class="exams-list" id="examsList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="exams.js"></script>
+
+</body>
+</html>

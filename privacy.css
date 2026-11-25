@@ -1,0 +1,221 @@
+
+:root {
+    --blue: #AAC9CE;
+    --gray: #B6B4C2;
+    --mauve: #C9BBC8;
+    --pink: #E5C1CD;
+    --peach: #F3DBCF;
+    --background: #F8F7F8;
+    --white: #FFFFFF;
+    --text: #45434A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.9;
+}
+
+/* Header */
+
+.header {
+    background: var(--white);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.logo {
+    text-decoration: none;
+    color: #555;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #555;
+    background: var(--blue);
+    padding: 9px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: var(--mauve);
+}
+
+/* Main */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 45px auto;
+}
+
+.privacy-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+/* Title */
+
+.page-icon {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #555;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-top: 5px;
+}
+
+.update-date {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* Intro */
+
+.intro {
+    background: #F1F7F7;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-right: 4px solid var(--blue);
+}
+
+/* Sections */
+
+.policy-section {
+    margin: 28px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.policy-section h2 {
+    color: #739DA3;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.policy-section p {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.policy-section ul {
+    padding-right: 25px;
+    margin: 10px 0;
+}
+
+.policy-section li {
+    margin: 5px 0;
+}
+
+.policy-section a {
+    color: #739DA3;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+/* Ending */
+
+.ending {
+    background: #FAF1F4;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #8D7180;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.ending p {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* Home Button */
+
+.home-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 12px 28px;
+    background: var(--blue);
+    color: #45434A;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: var(--mauve);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .privacy-card {
+        padding: 22px 17px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .policy-section h2 {
+        font-size: 18px;
+    }
+
+}

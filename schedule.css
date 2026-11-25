@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f8f5f7;
+    color: #45434b;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: #AAC9CE;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #343a40;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #45434b;
+    padding: 13px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #ffffff;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #6d6475;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #88818c;
+}
+
+button {
+    border: none;
+    background: #C9BBC8;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #B6B4C2;
+}
+
+.schedule-section h2 {
+    margin-bottom: 20px;
+    color: #6d6475;
+}
+
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.form-container h3 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+}
+
+form button {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.day-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 140px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.day-card h3 {
+    color: #8c788d;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #E5C1CD;
+    padding-bottom: 10px;
+}
+
+.lesson {
+    background: #f3e9ef;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.lesson p {
+    line-height: 1.7;
+}
+
+.delete-btn {
+    background: #E5C1CD;
+    padding: 8px 12px;
+}
+
+@media (max-width: 750px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .days-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 18px;
+    }
+}

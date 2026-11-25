@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهامي | Study Planner</title>
+    <link rel="stylesheet" href="tasks.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>Study Planner</h2>
+
+        <a href="dashboard.html">🏠 الرئيسية</a>
+        <a href="schedule.html">📅 الجدول الدراسي</a>
+        <a href="tasks.html" class="active">📝 المهام</a>
+        <a href="exams.html" class="nav-link" id="navExams">📚 الامتحانات</a>
+        <a href="timer.html" class="nav-link" id="navTimer">⏱️ مؤقت الدراسة</a>
+        <a href="achievements.html" class="nav-link" id="navAchievements">🏆 إنجازاتي</a>
+        <a href="profile.html" class="nav-link" id="navProfile">👤 الملف الشخصي</a>
+        <a href="settings.html" class="nav-link" id="navSettings">⚙️ الإعدادات</a>
+        <a href="index.html">🚪 تسجيل الخروج</a>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <div>
+                <h1>مهامي الدراسية</h1>
+                <p>رتّبي مهامك وأنجزيها خطوة بخطوة</p>
+            </div>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>كل المهام</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>المهام المكتملة</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>المهام المتبقية</h3>
+                <p id="remainingTasks">0</p>
+            </div>
+
+        </section>
+
+        <section class="add-section">
+
+            <h2>إضافة مهمة جديدة +</h2>
+
+            <form id="taskForm">
+
+                <input type="text" id="taskName"
+                    placeholder="اكتبي اسم المهمة..." required>
+
+                <select id="taskSubject" required>
+                    <option value="">اختاري المادة</option>
+                    <option>اللغة العربية</option>
+                    <option>اللغة الإنجليزية</option>
+                    <option>التاريخ</option>
+                    <option>التربية الإسلامية</option>
+                    <option>مواد أخرى</option>
+                </select>
+
+                <input type="date" id="taskDate" required>
+
+                <select id="taskPriority">
+                    <option value="عالية">أولوية عالية</option>
+                    <option value="متوسطة">أولوية متوسطة</option>
+                    <option value="منخفضة">أولوية منخفضة</option>
+                </select>
+
+                <button type="submit">إضافة المهمة</button>
+
+            </form>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <h2>قائمة المهام</h2>
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">الكل</button>
+                <button class="filter" data-filter="pending">قيد الإنجاز</button>
+                <button class="filter" data-filter="completed">مكتملة</button>
+            </div>
+
+            <div id="tasksList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="tasks.js"></script>
+
+</body>
+</html>

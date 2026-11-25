@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي | Study Planner</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>Study Planner</h2>
+
+        <a href="dashboard.html">🏠 الرئيسية</a>
+        <a href="schedule.html">📅 الجدول الدراسي</a>
+        <a href="tasks.html">📝 المهام</a>
+        <a href="exams.html">📚 الامتحانات</a>
+        <a href="timer.html">⏱️ مؤقت الدراسة</a>
+        <a href="achievements.html">🏆 إنجازاتي</a>
+        <a href="profile.html" class="active">👤 الملف الشخصي</a>
+        <a href="settings.html" class="nav-link" id="navSettings">⚙️ الإعدادات</a>
+        <a href="index.html">🚪 تسجيل الخروج</a>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>الملف الشخصي</h1>
+            <p>معلوماتك الشخصية وأهدافك الدراسية</p>
+        </header>
+
+        <section class="profile-card">
+
+            <div class="avatar-wrapper">
+
+    <div class="avatar">
+        <img id="profileImage" src="" alt="الصورة الشخصية">
+
+        <span id="avatarPlaceholder">👩🏻‍🎓</span>
+    </div>
+
+    <label for="profileImageInput" class="change-photo">
+        📷 تغيير الصورة
+    </label>
+
+    <input
+        type="file"
+        id="profileImageInput"
+        accept="image/*"
+        hidden
+    >
+
+</div>
+
+            <h2 id="displayName">اسم الطالبة</h2>
+            <p>طالبة مجتهدة تسعى للنجاح 🌸</p>
+
+        </section>
+
+        <section class="profile-form">
+
+            <h2>المعلومات الشخصية</h2>
+
+            <form id="profileForm">
+
+                <label>الاسم</label>
+                <input type="text" id="userName" placeholder="اكتبي اسمك" required>
+
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="userEmail" placeholder="example@email.com">
+
+                <label>الصف الدراسي</label>
+                <select id="userGrade">
+                    <option value="الصف العاشر">الصف العاشر</option>
+                    <option value="الصف الحادي عشر">الصف الحادي عشر</option>
+                    <option value="الصف الثاني عشر">الصف الثاني عشر</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+
+                <label>هدفي الدراسي</label>
+                <textarea id="userGoal" placeholder="اكتبي هدفك الدراسي..."></textarea>
+
+                <button type="submit">حفظ التغييرات</button>
+
+            </form>
+
+            <p id="saveMessage"></p>
+
+        </section>
+
+    </main>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>

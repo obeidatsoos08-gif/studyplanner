@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجدول الدراسي | Study Planner</title>
+    <link rel="stylesheet" href="schedule.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Study Planner</h2>
+
+        <a href="dashboard.html">الرئيسية</a>
+        <a href="schedule.html" class="active">الجدول الدراسي</a>
+        <a href="tasks.html" class="nav-link" id="navTasks">📝 المهام</a>
+        <a href="exams.html" class="nav-link" id="navExams">📚 الامتحانات</a>
+        <a href="timer.html" class="nav-link" id="navTimer">⏱️ مؤقت الدراسة</a>
+        <a href="achievements.html" class="nav-link" id="navAchievements">🏆 إنجازاتي</a>
+        <a href="profile.html" class="nav-link" id="navProfile">👤 الملف الشخصي</a>
+        <a href="settings.html" class="nav-link" id="navSettings">⚙️ الإعدادات</a>
+        <a href="index.html">تسجيل الخروج</a>
+    </div>
+
+    <main class="content">
+
+        <header>
+            <div>
+                <h1 id="pageTitle">الجدول الدراسي</h1>
+                <p>نظّمي وقتك ووزّعي موادك خلال الأسبوع</p>
+            </div>
+
+            <button id="languageBtn" onclick="changeLanguage()">English</button>
+        </header>
+
+        <section class="schedule-section">
+
+            <h2 id="scheduleTitle">جدولي الأسبوعي</h2>
+
+            <div class="form-container">
+
+                <h3 id="addTitle">إضافة حصة دراسية</h3>
+
+                <form id="scheduleForm">
+
+                    <label id="dayLabel">اليوم</label>
+                    <select id="day" required>
+                        <option value="الأحد">الأحد</option>
+                        <option value="الإثنين">الإثنين</option>
+                        <option value="الثلاثاء">الثلاثاء</option>
+                        <option value="الأربعاء">الأربعاء</option>
+                        <option value="الخميس">الخميس</option>
+                        <option value="الجمعة">الجمعة</option>
+                        <option value="السبت">السبت</option>
+                    </select>
+
+                    <label id="subjectLabel">المادة</label>
+                    <input type="text" id="subject" placeholder="مثلاً: اللغة الإنجليزية" required>
+
+                    <label id="startLabel">وقت البداية</label>
+                    <input type="time" id="startTime" required>
+
+                    <label id="endLabel">وقت النهاية</label>
+                    <input type="time" id="endTime" required>
+
+                    <button type="submit" id="addBtn">إضافة الحصة +</button>
+
+                </form>
+
+            </div>
+
+            <div class="days-container" id="daysContainer">
+
+                <div class="day-card">
+                    <h3>الأحد</h3>
+                    <div class="lessons"></div>
+                </div>
+
+                <div class="day-card">
+                    <h3>الإثنين</h3>
+                    <div class="lessons"></div>
+                </div>
+
+                <div class="day-card">
+                    <h3>الثلاثاء</h3>
+                    <div class="lessons"></div>
+                </div>
+
+                <div class="day-card">
+                    <h3>الأربعاء</h3>
+                    <div class="lessons"></div>
+                </div>
+
+                <div class="day-card">
+                    <h3>الخميس</h3>
+                    <div class="lessons"></div>
+                </div>
+
+                <div class="day-card">
+                    <h3>الجمعة</h3>
+                    <div class="lessons"></div>
+                </div>
+
+                <div class="day-card">
+                    <h3>السبت</h3>
+                    <div class="lessons"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="schedule.js"></script>
+
+</body>
+</html>
